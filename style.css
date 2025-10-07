@@ -3,53 +3,86 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #f0f0f0;
-  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffe6f2, #ffccf9);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 .calculator {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  background: #fff0f6;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0px 6px 15px rgba(255, 182, 193, 0.6);
+  border: 3px dashed #ff99cc;
+  text-align: center;
+  position: relative;
+}
+
+.calculator::before {
+  content: "🧸";
+  font-size: 40px;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
+
+.calculator::after {
+  content: "🧸";
+  font-size: 40px;
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
 }
 
 .display {
   width: 100%;
-  height: 50px;
+  height: 55px;
   text-align: right;
-  margin-bottom: 10px;
-  font-size: 20px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  padding: 8px;
+  border: 2px solid #ff99cc;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: inset 0px 3px 6px rgba(255, 182, 193, 0.3);
 }
 
 .buttons {
   display: grid;
-  grid-template-columns: repeat(4, 60px);
-  gap: 10px;
+  grid-template-columns: repeat(4, 65px);
+  gap: 12px;
+  justify-content: center;
 }
 
 button {
-  height: 50px;
-  font-size: 18px;
+  height: 55px;
+  font-size: 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
-  background: #eee;
+  background: #ffd6eb;
+  color: #333;
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(255, 105, 180, 0.3);
+  transition: transform 0.2s, background 0.3s;
 }
 
 button:hover {
-  background: #ddd;
+  background: #ffb3da;
+  transform: scale(1.1);
 }
 
 .equal {
   grid-column: span 2;
-  background: #4CAF50;
+  background: #ff69b4;
   color: white;
+  box-shadow: 0px 4px 10px rgba(255, 20, 147, 0.5);
 }
 
 .equal:hover {
-  background: #45a049;
+  background: #ff1493;
+}
+
+button.clear {
+  background: #ffcce0;
+  color: #ff3366;
 }
